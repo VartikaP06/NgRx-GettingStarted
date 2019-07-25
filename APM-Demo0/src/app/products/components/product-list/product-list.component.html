@@ -4,7 +4,7 @@
     {{pageTitle}}
   </div>
 
-  <div class="card-body" *ngIf="products$ | async as products">
+  <div class="card-body" *ngIf="products">
     <div class="list-group">
       <button class="list-group-item list-group-item-action rounded-0"
           *ngFor="let product of products"
@@ -30,12 +30,12 @@
       </div>
       <div class="col-md-4 text-right">
         <button class="btn btn-primary" (click)="newProduct()">
-          Add
+          Add button
         </button>
       </div>
     </div>
   </div>
 </div>
-<div *ngIf="errorMessage$ | async as errorMessage" class="alert alert-danger">
+<div *ngIf="errorMessage" class="alert alert-danger">
   Error: {{ errorMessage }}
 </div>
